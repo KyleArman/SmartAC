@@ -2,6 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | ARAircondSimulation</title>
     <meta name="description" content="">
@@ -10,7 +11,7 @@
   </head>
   <body>
     <div id="unity-container">
-      <div id="unity-canvas-container">
+      <div id="unity-canvas-container" style="width: 100%; height: 100%;">
         <canvas id="unity-canvas" style="width: 100%; height: 100%;"></canvas>
       </div>
       <div id="unity-loading-bar">
@@ -20,18 +21,13 @@
         </div>
       </div>
       <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
-        <button id="entervr" value="Enter VR" disabled>VR</button>
-        <button id="enterar" value="Enter AR" disabled>AR</button>
-        <div id="unity-webxr-link">Using <a href="https://github.com/De-Panther/unity-webxr-export" target="_blank" title="WebXR Export">WebXR Export</a></div>
-        <div id="unity-build-title">ARAircondSimulation</div>
       </div>
     </div>
     <script>
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/bb0d9ecdb05db3e84da20bd14a4f84dc.loader.js";
       var config = {
-        dataUrl: buildUrl + "/e788b4cc7b1d74d32a7277a45f846f2c.data",
+        dataUrl: buildUrl + "/3aece26424c03e1bec209daaa07e0a81.data",
         frameworkUrl: buildUrl + "/e4252283d5517eecd3c06f5699d8f8f9.framework.js",
         codeUrl: buildUrl + "/d58a011aa9f76cf02b4066099ef5baa3.wasm",
         streamingAssetsUrl: "StreamingAssets",
@@ -49,8 +45,6 @@
       var unityInstance = null;
       
 
-      canvasContainer.style.width = "960px";
-      canvasContainer.style.height = "600px";
       loadingBar.style.display = "block";
 
       var script = document.createElement("script");
