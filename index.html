@@ -72,8 +72,15 @@
       };
       document.body.appendChild(script);
 
-      //let enterARButton = document.getElementById('enterar');
-      //let enterVRButton = document.getElementById('entervr');
+      let vrBtn = document.getElementById("entervr");
+      if (vrBtn) {
+        vrBtn.disabled = true;
+      }
+
+      let arBtn = document.getElementById("enterar");
+      if (arBtn) {
+        arBtn.disabled = true;
+      }
 
       document.addEventListener('onARSupportedCheck', function (event) {
         enterARButton.disabled = !event.detail.supported;
